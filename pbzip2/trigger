@@ -1,0 +1,4 @@
+1. patch -p1 -i pbzip2.patch
+2. /pbzip2 -k -f -p3 .tar
+3. segmentation fault
+

@@ -1,0 +1,23 @@
+1. ./configure --prefix=<httpd-install-dir> --with-mpm=worker --enable-maintainer-mode
+2. Configure
+1) Open <httpd-install-dir>/conf/httpd.conf
+
+Uncomment the following line: (line 370)
+
+Include conf/extra/httpd-mpm.conf
+
+2) Open <httpd-install-dir>/conf/extra/httpd-mpm.conf
+
+Modify the following lines:
+
+<IfModule mpm_worker_module>
+    StartServers          1
+    MaxClients            3
+    MinSpareThreads       1
+    MaxSpareThreads       3
+    ThreadsPerChild       3
+    MaxRequestsPerChild   0
+    ServerLimit           1
+</IfModule>
+3. multi-console wget 127.0.0.1
+4. Check '/logs/error_log' file.

@@ -1,0 +1,4 @@
+1. patch -p1 -i aget.patch
+2. aget -n4 http:// -l your.file
+3. Type ctrl+c to stop the download in the middle.
+4. assertion failure:

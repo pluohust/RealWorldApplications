@@ -1,0 +1,5 @@
+1. patch -p1 -i cherokee.patch
+2. line 29: vserver!1!logger!access!buffsize = 1024
+3. multi-console wget 127.0.0.1
+4. Check garbage log file 'var/log/cherokee.access'
+
